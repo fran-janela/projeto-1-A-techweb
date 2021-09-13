@@ -1,0 +1,145 @@
+/* Add Note Form */
+
+.addNoteForm {
+  display: none;
+  grid-area: 1/1;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.form-card {
+  display: grid;
+  grid-template-rows: 15% 10% auto 20% 10%;
+  grid-template-columns: 23% auto 23%;
+  margin: 3% 30%;
+  height: 40vw;
+  background-color: white;
+  box-shadow: 0 7px 20px rgb(0 0 0 / 15%), 0 2px 3px rgb(0 0 0 / 22%);
+  border-radius: 8px;
+}
+
+.form-card-title {
+  grid-area: 2/2;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-size: 1.35vw;
+  font-weight: bold;
+  margin-bottom: 5%;
+  text-align: center;
+  align-content: center;
+}
+
+.form-card-content {
+  grid-area: 3/2;
+  height: 80%;
+  resize: none;
+  font-family: Bradley Hand, cursive;
+  font-size: 1.25vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-card-buttons {
+  grid-area: 4/2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.form-card input:focus,
+.form-card textarea:focus {
+  border-color: gray;
+}
+
+#addNote-button-close {
+  width: 100%;
+  height: 40%;
+  background-color: #c6c6c6;
+  font-size: 1.3vw;
+}
+
+#addNote-button-create {
+  width: 100%;
+  height: 40%;
+  font-size: 1.3vw;
+}
+
+.form-card button:hover {
+  cursor: pointer;
+}
+
+/* Update Form */
+
+.updateNoteForm {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  display: none;
+  width: 92%;
+  height: 110%;
+  margin: 4%;
+  background-color: white;
+  border-radius: 2%;
+  box-shadow: 0 7px 20px rgb(0 0 0 / 15%), 0 2px 3px rgb(0 0 0 / 22%);
+  z-index: 9;
+}
+.form-card-update {
+  display: grid;
+  grid-template-columns: 3% auto 3%;
+  grid-template-rows: 3% 20% auto 15% 3%;
+}
+
+.update-card-title {
+  width: 93.5%;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-size: 1.2vw;
+  grid-area: 2/2;
+  margin: 2%;
+  border-color: rgb(193, 193, 193);
+  border-style: solid;
+  border-width: 0.01vw;
+  text-align: center;
+}
+
+.update-card-content {
+  width: 93.5%;
+  font-family: Bradley Hand, cursive;
+  font-size: 1vw;
+  grid-area: 3/2;
+  margin: 2%;
+  margin-top: 0%;
+  margin-bottom: 4%;
+  resize: none;
+  border-style: solid;
+  border-color: rgb(193, 193, 193);
+  border-width: 0.01vw;
+  text-align: center;
+}
+
+.update-card-buttons {
+  grid-area: 4/2;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+#update-button-close {
+  margin: 2%;
+  margin-left: 5%;
+  background-color: #c6c6c6;
+  font-size: 1vw;
+}
+
+#update-button-change {
+  margin: 2%;
+  margin-right: 5%;
+  font-size: 1vw;
+}
+
+.form-card-update button:hover {
+  cursor: pointer;
+}

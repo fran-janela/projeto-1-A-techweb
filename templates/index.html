@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get-it</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+      integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/form.css" />
+    <link rel="stylesheet" href="styles/card.css" />
+  </head>
+
+  <body>
+    <div class="appbar">
+      <img src="public/img/logo-getit.png" class="logo" />
+      <span class="subtitle">Como o Post-it, mas com outro verbo</span>
+    </div>
+
+    <div class="add-note-container">
+      <button type="button" class="add-note-button" onclick="openAddNoteForm()">
+        <img src="public/img/add-note.png" class="add-note-img" />
+      </button>
+    </div>
+    <script type="text/javascript" src="script/getit.js"></script>
+    <main>
+      <!-- Form de POST para add uma nota na DB -->
+      <div class="addNoteForm" id="addNoteFormID">
+        <form class="form-card" method="post">
+          <input type="hidden" name="method" value="POST" />
+          <input
+            class="form-card-title"
+            type="text"
+            name="title"
+            placeholder="Título"
+            required
+          />
+          <textarea
+            class="form-card-content"
+            name="content"
+            placeholder="Digite o conteúdo..."
+            required
+          ></textarea>
+          <div class="form-card-buttons">
+            <button class="btn" id="addNote-button-create" type="submit">
+              Criar
+            </button>
+            <button
+              class="btn"
+              id="addNote-button-close"
+              type="button"
+              onclick="closeAddNoteForm()"
+            >
+              Fechar
+            </button>
+          </div>
+        </form>
+      </div>
+      <!-- notas  -->
+      <div class="card-container">{notes}</div>
+      <!-- Post PopUp -->
+    </main>
+  </body>
+</html>

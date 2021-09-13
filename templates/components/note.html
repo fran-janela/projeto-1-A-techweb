@@ -1,0 +1,62 @@
+<div class="card">
+  <div class="card-header">
+    <div class="card-buttons">
+      <!-- Botão de DELETE -->
+      <form class="button-delete-form" method="post">
+        <input type="hidden" name="method" value="DELETE" />
+        <input type="hidden" name="id" value="{id}" />
+        <button class="button-delete" type="submit">
+          <img src="public/img/caixote-de-lixo.png" class="card-image" />
+        </button>
+      </form>
+      <!-- Botão de Editar -->
+      <button
+        class="button-update"
+        type="button"
+        onclick="openUpdateForm({id})"
+      >
+        <img src="public/img/ferramenta-lapis.png" class="card-image" />
+      </button>
+    </div>
+    <!-- Titulo da Nota -->
+    <div class="card-title">{title}</div>
+  </div>
+  <!-- Conteúdo da nota -->
+  <div class="card-content">
+    <p>{content}</p>
+  </div>
+  <!-- Form UPDATE -->
+  <div class="updateNoteForm" id="updateNoteForm{id}">
+    <form class="form-card-update" method="post">
+      <input type="hidden" name="method" value="UPDATE" />
+      <input type="hidden" name="id" value="{id}" />
+      <input
+        class="update-card-title"
+        type="text"
+        name="title"
+        placeholder="{title}"
+        value="{title}"
+      />
+      <textarea
+        class="update-card-content"
+        name="content"
+        placeholder="{content}"
+      >
+{content} </textarea
+      >
+      <div class="update-card-buttons">
+        <button
+          class="btn"
+          id="update-button-close"
+          type="button"
+          onclick="closeUpdateForm({id})"
+        >
+          Cancelar
+        </button>
+        <button class="btn" id="update-button-change" type="submit">
+          Alterar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
