@@ -12,4 +12,6 @@
 </table>
 </div>
 
-Insper - 4ºComp
+<div align="right">
+  Insper - 4ºComp
+</div>
